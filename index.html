@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>📋 Summary</h1>
+    <div class="summary">
+      <div class="card income-card">
+        <h3>Income</h3>
+        <p>₹<span id="income">0</span></p>
+      </div>
+      <div class="card expense-card">
+        <h3>Expense</h3>
+        <p>₹<span id="expense">0</span></p>
+      </div>
+    </div>
+
+    <form id="transactionForm">
+
+      <input type="number" id="amount" placeholder="Amount (₹)" required />
+      <input type="date" id="date" required />
+      <select id="type" required>
+        <option value="" disabled selected hidden>Please select type</option>
+        <option value="Income">💰Income</option>
+        <option value="Expense">💸Expense</option>
+      </select>
+      <select id="Category">
+      </select>
+      
+      <button type="submit" >➕ Add Transaction</button>
+    </form>
+
+
+    <ul id="transactionList">
+      
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
